@@ -1,0 +1,79 @@
+{
+    "Skills" : [
+        "熟悉OO思想、设计模式(Design Pattern)，有敏捷(Agile)开发经历，良好的编程习惯",
+        "熟悉Java语言，如Classloader、GC、内存分配、Multi-threading、NetWork、I/O、Reflection、Annotation、JDBC等",
+        "有丰富的J2EE开发经验， 掌握JSP/Servlet，Structs2/Spring/Hibernate/Ejb3.0/jbpm，Freemark/SiteMesh/Tiles，EL/Ognl/JFinal，ibatis，RESTful(Jersey) 等技术，熟练使用 cvs/svn/Git/Maven等",
+        "熟悉Asp ，PHP，Tcl等开发语言， 熟练使用JS(Prototype/Jquery/AngularJs)，css， html，xml等",
+        "熟练使用Tomcat、Iis5.0、Jboss4.0/7.1、Jrun4应用服务器",
+        "熟练的使用Dreamwar、Photoshop、Fash等前端开发工具",
+        "熟练使用Mysql、PostgreSql、Oracle、SQL Server数据库，熟悉NoSql的Mongodb数据库，key-value型的Memorycache, Redis内存数据库",
+        "熟悉路由器和交换机，能组网、建网和对服务器进行管理；掌握HTTP、TCP/IP、网络安全的知识",
+        "熟练的使用Linux（Redhat/Ubuntu/Suse..）操作系统，使用基本命令，编写简单的Shell Programming"
+    ],
+    "WorkHistorys" : [ 
+	{ 
+		"worktime":"2011.9 ~ 至今", 
+		"company":"瞬联软件科技(北京)有限公司", 
+		"nature":"全职工作" 
+	}, 
+	{ 
+		"worktime":"2010.3 ~ 2011.9", 
+		"company":"中软国际科技服务有限公司（外包华为）", 
+		"nature":"全职工作" 
+	}, 
+	{ 
+		"worktime":"2009.7 ~ 2010.3", 
+		"company":"哈尔滨工程大学科技园软件中心", 
+		"nature":"实习工作"
+	},
+	{ 
+		"worktime":"2008.7 ~ 2009.6", 
+		"company":"齐齐哈尔合众商务科技有限公司", 
+		"nature":"大学期间兼职工作" 
+	}],
+    
+    "SelfEvaluations" : [
+        "具有创新意识。善于组织和协调工作。自愿服从领导安排，不怕吃苦",
+        "善于沟通交流，有较强的接受能力和学习能力，可以快速适应工作",
+        "生活俭朴、乐于助人、好学上进，工作踏实认真、责任感较强，对待工作认真负责"
+    ],
+    
+    "Experiences" : [
+        {
+            "tabId":"tab0",
+            "year":"xxx",
+            "name":"xx",
+            "post":"xxx",
+            "brief":"xxxx",
+            "framework":"xxxx",
+            "performance":"xxxx"
+        },
+        {
+            "tabId":"tab1",
+            "year":"2013.10–至今",
+            "name":"Cienet 内部管理系统",
+            "post":"作为项目开发人，负责系统编码、测试等工作",
+            "brief":"本人只参加了项目的人事管理系统，TimeSheet管理系统，项目管理系统等的开发与Fix Bug；协助公司其他团队开发手机测试项目的Web Server模块Bug问题",
+            "framework":"",
+            "performance":""
+        },
+        {
+            "tabId":"tab3",
+            "year":"2013.7–2013.10",
+            "name":"DellWyse Pocket Cloud Project",
+            "post":"作为项目开发人，负责系统架构、设计、编码、测试等工作",
+            "brief":"是公司承接的DELL公司的项目，先期在客户的要求下，要先开一个Demo出来，项目产品开发需要使用GAE进行开发，并部署在GAE上",
+            "framework":"本项目采用是RESTful风格架构,使用的技术有Servlet,Jersey,Hibernate,Spring,HttpClient,Log4j,Dom4j,Git,Maven,Javascript,jQuery,Ajax,Bootstrap,Html,AngularJs等技术。开发工具Eclipse4.2,数据库MySQL,Web应用服务器为Tomcat7",
+            "performance":"Demo工作已经基本完成，由本人一人完成，开发时间二个多月，Demo成果非常不错，得到了领导和客户方的认可"
+        },
+        {
+            "tabId":"tab4",
+            "year":"2011.9 –2013.6",
+            "name":"台北国税局OA系统",
+            "post":"作为项目开发人，并协助系统分析人员分析、设计、开发和测试工作",
+            "brief":"台北国税局OA系统下有一百多个子系统，我司只承接16个子系统，在公司其间共参与开发了五个子系统，分别是差勤，财产，物品，车辆、人民陈情管理子系统等。项目已上线，并交付给客户。从项目中学到了很多关于OA类项目开发的经验，对J2EE开发应用系统有了更深层次的理解",
+            "framework":"本项目使用EJB3.0,Struts2,Hibernate,Jbpm4,JSP,Javascript,Jquery,Ajax,Log4j,Dom4j,Jstl,Ogln,Svn,Ant,Freemarker,SiteMesh等技术。开发工具Eclipse3.7,数据库Oracle9,J2EE应用服务器为TAS (是基于Jboss4.2版本封装的J2EE服务器)",
+            "performance":"该项目最终实现了补丁管理系统、Bug跟踪系统和版本管理的开发工作，上线后在华为公司内部得到了广泛应用与好评"
+        }
+    ]
+}

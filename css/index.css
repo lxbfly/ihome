@@ -1,0 +1,316 @@
+/* Global Styles */
+
+html,body {
+  height: 100%;
+  width: 100%;
+}
+
+.vert-text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.vert-text h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 4.5em;
+  font-weight: 700;
+}
+
+.top-log {
+  font-size: 28px;
+  font-weight: bolder;
+  margin-left: 10px;
+  margin-right: 40px;
+}
+
+.top-menu a {
+  font-weight: bold;
+  float: left;
+}
+
+.navbar a {
+  top: 5px;
+}
+
+.img-circle {
+    margin: 5px auto;
+}
+
+/* Side Menu */
+#sidebar-wrapper {
+  top: 50px;
+  margin-right: -250px;
+  right: 0;
+  width: 250px;
+  background: #000;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  filter:alpha(opacity=50);  /*支持 IE 浏览器*/
+  -moz-opacity:0.50; /*支持 FireFox 浏览器*/
+  opacity:0.50;  /*支持 Chrome, Opera, Safari 等浏览器*/
+}
+.navbar {
+  filter:alpha(opacity=80);  /*支持 IE 浏览器*/
+  -moz-opacity:0.80; /*支持 FireFox 浏览器*/
+  opacity:0.80;  /*支持 Chrome, Opera, Safari 等浏览器*/ 
+}
+
+.sidebar-nav {
+  position: absolute;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-nav li {
+  line-height: 40px;
+  text-indent: 20px;
+}
+
+.sidebar-nav li a {
+  color: #999999;
+  display: block;
+  text-decoration: none;
+}
+
+.sidebar-nav li a:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.2);
+  text-decoration: none;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  height: 55px;
+  line-height: 55px;
+  font-size: 18px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+#menu-toggle {
+  top: 50px;
+  right: 0;
+  position: fixed;
+  z-index: 1;
+  filter:alpha(opacity=50);  /*支持 IE 浏览器*/
+  -moz-opacity:0.50; /*支持 FireFox 浏览器*/
+  opacity:0.50;  /*支持 Chrome, Opera, Safari 等浏览器*/  
+}
+
+#sidebar-wrapper.active {
+  right: 250px;
+  width: 250px;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.toggle {
+  margin: 5px 5px 0 0;
+}
+
+/* Full Page Image Header Area */
+
+.header {
+  display: table;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: url(../img/animated-blue-sky.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Intro */
+
+.intro {
+  padding: 50px 0;
+}
+
+/* Services */
+
+.services {
+  background: #7fbbda;
+  padding: 50px 0;
+  color: #ffffff;
+}
+
+.service-item {
+  margin-bottom: 15px;
+}
+
+i.service-icon {
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 56px;
+  width: 140px;
+  height: 140px;
+  line-height: 136px;
+  vertical-align: middle; 
+  text-align: center;
+}
+
+/* Callout */
+
+.callout {
+  color: #ffffff;
+  display: table;
+  height: 400px;
+  width: 100%;
+  background: url(../img/callout.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.workHistory {
+  background: #AB82FF;
+  padding: 50px 0;
+}
+
+/* Portfolio */
+
+.portfolio {
+  padding: 50px 0;
+}
+
+.portfolio-item {
+  margin-bottom: 25px;
+}
+
+.img-portfolio {
+  margin: 0 auto;
+}
+
+.contact {
+  padding: 50px 0;
+}
+
+/* Call to Action */
+
+.call-to-action {
+  color: #ffffff;
+  background: #0a5175;
+  padding: 50px 0;
+}
+
+.call-to-action .btn {
+  margin: 10px;
+}
+
+/* Footer */
+
+footer {
+  padding: 30px 0;
+}
+
+.top-scroll {
+  margin-top: 50px;
+}
+
+.top-scroll a {
+  text-decoration: none;
+  color: inherit;
+}
+
+i.scroll {
+  color: #333333;
+}
+
+i.scroll:hover {
+  color: #0a5175;
+}
+
+.padding-large {
+    padding: 45px;
+}
+.sns {
+    margin: 0 auto;
+    max-width: 1040px;
+}
+.sns-container {
+    margin: 0 auto;
+    max-width: 520px;
+    position: relative;
+}
+.sns-icon {
+    border-radius: 13px 13px 13px 13px;
+    box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.35), 0 -1px 0 rgba(0, 0, 0, 0.5) inset, 0 1px 0 rgba(255, 255, 255, 0.6) inset;
+    float: left;
+    margin: 0 30px 60px;
+    position: relative;
+    transition: all 1s ease 0s;
+    width: 70px;
+}
+.sns-icon:hover {
+}
+.sns-icon:before {
+    background: -moz-linear-gradient(center top , rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.1) 100%) repeat scroll 0 0 transparent;
+    border-radius: 13px 13px 13px 13px;
+    content: " ";
+    height: 50%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 1s ease 0s;
+    width: 100%;
+}
+.sns-icon:hover:before {
+    background: -moz-linear-gradient(center top , rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%) repeat scroll 0 0 transparent;
+    height: 0;
+    transition: all 1s ease 0s;
+}
+.sns-icon:after {
+    background: -moz-linear-gradient(center top , rgba(230, 230, 230, 0.3) 0%, rgba(230, 230, 230, 0) 100%) repeat scroll 0 0 transparent;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    bottom: -31px;
+    content: " ";
+    height: 30px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+.sns-fadeout {
+    opacity: 0.5;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .header {
+	background: url(../img/animated-blue-sky.jpg) no-repeat center center scroll; 
+  }
+
+  .callout {
+	background: url(../img/callout.jpg) no-repeat center center scroll; 
+  }
+}

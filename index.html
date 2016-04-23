@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="xuebing's resume">
+    <meta name="author" content="xuebing">
+
+    <title>Xuebing's World</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/index.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body ng-controller="ResumeDataInfoCtrl">
+    <!-- /Side Top Menu -->
+    <div>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <a href="#" class="top-log navbar-brand">Xuebing's Resume</a>
+            <ul class="top-menu nav nav-pills navbar-left">
+                <li><a href="#top">主页</a></li>
+                <li><a href="#skill">专业技能</a></li>
+<!--                 <li><a href="#experiences">项目经历</a></li>
+                <li><a href="#workHistory">工作经历</a></li> -->
+                <li><a href="#portfolio">工作地点</a></li>
+                <li><a href="#self-evaluation">自我评价</a></li>
+				<li><a href="http://blog.coderxb.com">我的博客</a></li>
+				<li><a href="http://blog.csdn.net/lxb2009">我的CSDN</a></li>
+                <li><a href="#contact">联系方式</a></li>
+            </ul>
+        </nav>        
+    </div>
+    <!-- /Side Top Menu -->
+
+    <!-- Side Menu -->
+    <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand"><a href="#">Xuebing's Resume</a></li>
+            <li><a href="#top">Home</a></li>
+            <li><a href="#skill">Skill</a></li>
+<!--             <li><a href="#experiences">experiences</a></li>
+            <li><a href="#workHistory">Work History</a></li> -->
+            <li><a href="#portfolio">Location</a></li>
+            <li><a href="#self-evaluation">Self-evaluation</a></li>
+			<li><a href="http://blog.coderxb.com">Blog</a></li>
+			<li><a href="http://blog.csdn.net/lxb2009">CSDN</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <!-- /Side Menu -->
+        
+    <!-- Full Page Image Header Area -->
+    <div id="top" class="header">
+
+        <div class="vert-text">
+            <p><img src="img/xiangshan256.jpg" alt="I am xuebing." class="img-circle"></p>			
+            <h3>
+                <Strong>Hello</Strong>, I am Li Xuebing,
+                <br />
+                I am a software developer, <em>You</em> can call me xuebing.
+				<br />
+				This page is through the Html, AngularJS, JavaScript, Bootstrap, JSON and opensource template completed.
+            </h3>
+            <a href="#skill" class="btn btn-default btn-lg">More...</a>
+        </div>
+    </div>
+    
+    <!-- /Full Page Image Header Area -->
+
+    <!-- Skill -->
+    <div id="skill" class="intro">
+        <div class="container">
+            <div class="row">
+                <div>
+                    <h2><strong>专业技能</strong></h2>
+                    <ul>
+                    	<li ng-repeat="skill in skills">{{skill}}</li>
+                    </ul>
+                </div>
+            </div>
+			<div class="row">
+			  	<div class="col-md-6"><strong>英语水平</strong> ：  CET 4 </div>
+			  	<div class="col-md-6"><strong>计算机水平</strong> ：  软件工程师/网络工程师</div>
+			</div>
+			<br />
+			<div class="text-center">
+				<a href="#experiences" data-loading-text="正在加载..." class="btn btn-primary">Go on...</a>
+			</div>
+        </div>
+    </div>
+    <!-- /skill -->
+    
+    <!-- Experiences -->
+    <div id="experiences" class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <h2>项目经验</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li ng-repeat="exp in experiences"><a href="#{{exp.tabId}}" data-toggle="tab">{{exp.year}}</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div ng-repeat="exp in experiences" class="tab-pane fade" id="{{exp.tabId}}">
+                        <dl class="dl-horizontal">
+                            <dt>项目名称</dt>
+                            <dd>{{exp.name}}</dd>
+                            <dt>职务</dt>
+                            <dd>{{exp.post}}</dd>
+                            <dt>项目简介</dt>
+                            <dd>{{exp.brief}}</dd>
+                            <dt>项目架构</dt>
+                            <dd>{{exp.framework}}</dd>
+                            <dt>业绩</dt>
+                            <dd>{{exp.performance}}</dd>
+                        </dl>                      
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+				<a href="#workHistory" data-loading-text="正在加载..." class="btn btn-primary">Go on...</a>
+			</div>
+        </div>
+    </div>
+    <!-- /Experiences -->
+
+    <!-- work history -->
+    <div id="workHistory" class="workHistory">
+	    <div class="container">
+	       	<div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <h2><strong>工作经历</strong></h2>
+                    <hr>
+                </div>
+            </div>
+			<div class="row">
+		      	<table class="table table-hover">
+		        	<thead>
+		          	<tr>
+		            	<th>No</th>
+		            	<th>工作时间</th>
+		            	<th>公司名称</th>
+		            	<th>工作性质</th>
+		          	</tr>
+		        	</thead>
+		        	<tbody>
+                    <tr ng-repeat="history in workhistorys">
+                        <td>{{$index + 1}}</td>
+                        <td>{{history.worktime}}</td>
+                        <td>{{history.company}}</td>
+                        <td>{{history.nature}}</td>
+                    </tr>
+		        	</tbody>
+		      	</table>
+		    </div>
+            <div class="text-center">
+				<a href="#portfolio" data-loading-text="正在加载..." class="btn btn-primary">Go on...</a>
+			</div>		    
+		</div>
+    </div>
+    <!-- /work history -->
+
+    <!-- Portfolio -->
+    <div id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <h2>In Beijing</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-2 text-center">
+                    <div class="portfolio-item">
+                        <a href="#">
+                            <img class="img-portfolio img-responsive" src="img/gugongjialou.png">
+                        </a>
+                        <h4>故宫角楼一景</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="portfolio-item">
+                        <a href="#">
+                            <img class="img-portfolio img-responsive" src="img/CBD.png">
+                        </a>
+                        <h4>CBD</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+				<a href="#self-evaluation" data-loading-text="正在加载..." class="btn btn-primary">Go on...</a>
+			</div>
+        </div>
+    </div>
+    <!-- /Portfolio -->
+
+    <!-- self-evaluation -->
+    <div id="self-evaluation" class="call-to-action">
+        <div class="container">
+	       	<div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <h2><strong>自我评价</strong></h2>
+                    <hr>
+                </div>
+            </div>        
+            <div class="row">
+	            <ul ng-repeat="evaluate in selfEvaluations">
+	            	<li>{{evaluate}}</li>
+	            </ul>
+
+	            <div class="col-md-6 col-md-offset-3 text-center">
+	                <h3>自我评价这事儿，还真不容易......<h3>
+	                <a href="#" class="btn btn-lg btn-primary">Look at Me!</a>
+	            </div>
+            </div>
+        </div>
+    </div>
+    <!-- /self-evaluation -->
+
+    <!-- Contact -->
+    <div id="contact" class="contact callout">
+        <div class="container">
+	       	<div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <h2><strong>联系方式</strong></h2>
+                    <hr>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="span12">
+                   <div class="padding-large">
+                       <div class="sns">
+							<!--
+                            <div class="sns-container">
+                                <a target="_blank" href="http://www.facebook.com/dandyweng">
+                                    <div title="" data-toggle="tooltip" class="sns-icon" id="icon-facebook" data-original-title="Facebook">
+                                        <img src="img/icon/facebook.png">
+                                    </div>
+                                </a>
+                                <a target="_blank" href="http://twitter.com/dandyweng">
+                                    <div title="" data-toggle="tooltip" class="sns-icon" id="icon-twitter" data-original-title="Twitter">
+                                        <img src="img/icon/twitter.png">
+                                    </div>
+                                </a>
+                                <a target="_blank" href="http://instagram.com/dandyweng">
+                                    <div title="" data-toggle="tooltip" class="sns-icon" id="icon-instagram" data-original-title="Instagram">
+                                        <img src="img/icon/facebook.png">
+                                    </div>
+                                </a>
+                                <a target="_blank" href="javascript:;">
+                                    <div title="" data-toggle="tooltip" class="sns-icon" id="icon-path" data-original-title="Path">
+                                        <img src="img/icon/facebook.png">
+                                    </div>
+                                </a>
+                            </div>
+							-->
+                            <div class="sns-container">
+                                <a target="_blank" href="http://weibo.com/2835077870">
+                                    <div title="新浪微博" data-toggle="tooltip" class="sns-icon" id="icon-sinaweibo">
+                                        <img src="img/icon/SinaWeibo.png">
+                                    </div>
+                                </a>
+                                <a target="_blank" href="https://github.com/lxbfly">
+                                    <div title="GitHub" data-toggle="tooltip" class="sns-icon" id="icon-tencentweibo">
+                                        <img src="img/icon/github2.png">
+                                    </div>
+                                </a>
+                                <a target="_blank" href="javascript:;">
+                                    <div title="微信 暂时保密" data-toggle="tooltip" class="sns-icon" id="icon-wechat">
+                                        <img src="img/icon/wechat.png">
+                                    </div>
+                                </a>
+                                <a target="_blank" href="javascript:;">
+                                    <div title="QQ 暂时保密" data-toggle="tooltip" class="sns-icon" id="icon-qq">
+                                        <img src="img/icon/qq.png">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <h3>就到这儿啦！.</h3>
+                <a href="#" class="btn btn-lg btn-primary">Look at Me!</a>
+            </div>
+        </div>
+    </div>
+    <!-- /Contact -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <hr>
+                    <p>Copyright &copy; Coder雪冰 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+ 
+    <!-- Loading JavaScript 3rdLibrary -->
+    <script src="js/3rdparty/jquery-1.11.0.js"></script>
+    <script src="js/3rdparty/bootstrap.min.js"></script>
+    <script src="js/3rdparty/angular.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        $(document).ready(function(){
+            //alert($("#tab1").html());
+        });            
+    </script>
+</body>
+
+</html>
