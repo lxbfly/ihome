@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://meckodo.github.io/myDemo/demo/6/index.html -->
+<html>
+    <head>
+        <meta name="generator"
+        content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>倒计时</title>
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="format-detection" content="telephone=no" />
+        <style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			html {
+				height: 100%;
+			}
+			body {
+				box-sizing: content-box;
+				background-size:  cover;
+				letter-spacing: 2.1px;
+			}
+			#box {
+				width: 600px;
+				margin: 100px auto;
+				text-align: center;
+			}
+			h1 {
+				color: #ABCDEF;
+				border-bottom: 1px solid #ccc;
+			}
+			#day {
+				font-size: 160px;
+				line-height: 160px;
+				width: 100%;
+				text-align: center;
+				vertical-align: baseline;
+				font-family: &amp;amp;amp;amp;#39;Gotham_SSm_7r&amp;amp;amp;amp;#39;;
+				color: #00E751; 
+			}
+			#time {
+				font-family: cursive,sans-serif;
+				color: #5B5F67;
+				font-size: 55px;
+			}
+			#fanyiWrapper {
+				height: 32px; 
+				width: 33px; 
+				font-family: 微软雅黑; 
+				font-size: 14px; 
+				text-align: center; 
+				line-height: 32px; 
+				color: rgb(255, 255, 255); 
+				background-color: rgb(67, 149, 255); 
+				border-radius: 2px; 
+				cursor: pointer; 
+				z-index: 99999; 
+				left: 293px; 
+				top: 316px; 
+				position: absolute;
+			}
+		</style>
+    </head>
+    <body style="position: static;">
+	
+        <section id="box">
+            <h1>距离宝贝一岁生日(2017年3月31号)还有</h1>
+            <h2 id="day">1370天</h2>
+            <span id="time">9小时39分钟40秒</span>
+        </section>
+		
+        <script type="text/javascript">
+			String.prototype.Right = function(i,e) {                                
+				return this.slice(this.length - i,this.length).substr(0,e); 
+			};
+			ShowCountDown(2017,3,31);
+			function ShowCountDown(year,month,day) { 
+				var now = new Date(); 
+				var endDate = new Date(year, month-1, day); 
+				var leftTime = endDate.getTime()-now.getTime(); //相差的时间戳
+				var leftsecond = parseInt(leftTime/1000); //相差的秒数
+				var day1 = Math.floor(leftsecond/(60*60*24)); //相差的天数
+				var hour = Math.floor((leftsecond%(60*60*24))/3600);  //相差的小时
+				var minute = Math.floor((leftsecond-day1*24*60*60-hour*3600)/60); //分钟
+				
+				var second = Math.floor(leftsecond-day1*24*60*60-hour*3600-minute*60);  
+				var ms = leftTime + "";;
+				var day = document.getElementById("day");
+				var time = document.getElementById("time");
+				day.innerHTML = day1 + "天";
+				time.innerHTML = hour + "小时" + minute +"分钟" + second + "秒";
+			}
+			setInterval(function(){
+				ShowCountDown(2017,3,31); //只需要传入你想要的日期即可
+			}, 1000);
+		</script>
+
+    </body>
+</html>
